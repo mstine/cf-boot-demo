@@ -1,0 +1,30 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        maven { url "http://repo.springsource.org/snapshot" }
+        maven { url "http://repo.springsource.org/milestone" }
+    }
+
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.0.0.RC3")
+    }
+}
+
+apply plugin: 'idea'
+apply plugin: 'eclipse'
+apply plugin: 'spring-boot'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+
+    maven { url "http://repo.springsource.org/snapshot" }
+    maven { url "http://repo.springsource.org/milestone" }
+
+}
+
+dependencies {
+    compile "org.springframework.boot:spring-boot-starter-tomcat:1.0.0.RC3"
+    compile "org.springframework.boot:spring-boot-starter-web:1.0.0.RC3"
+
+}
