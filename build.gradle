@@ -26,5 +26,8 @@ repositories {
 dependencies {
     compile "org.springframework.boot:spring-boot-starter-tomcat:1.0.0.RC3"
     compile "org.springframework.boot:spring-boot-starter-web:1.0.0.RC3"
+}
 
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.9'
 }
